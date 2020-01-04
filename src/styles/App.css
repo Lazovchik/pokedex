@@ -1,0 +1,10 @@
+
+.App{
+  /*to move cards UNDER the navbar*/
+  padding-top: 65px;
+  /*100% OF THE VIEWED HEIGHT*/
+  min-height: 100vh;
+}
+.navbar{
+  background-color: #6666ff !important;
+}
