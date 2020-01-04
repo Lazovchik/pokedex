@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CardList from "./pokemons/CardList";
+
 import CardListContainer from "./pokemons/containers/CardListContainer";
 
 class MainBoard extends Component {

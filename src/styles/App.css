@@ -8,3 +8,11 @@
 .navbar{
   background-color: #6666ff !important;
 }
+
+.card-header{
+  background-color: #6666ff !important;
+}
+
+.card{
+  background-color: rgba(102, 102, 255, 0.2)
+}
