@@ -9,7 +9,7 @@ const listReducer = (state = defaultState, action) => {
         case (LOAD_POKEMON_LIST):
             return {
                 ...state,
-                pokemonsList: action. payload
+                pokemonsList: action.payload
             };
     }
     return state;
