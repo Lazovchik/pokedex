@@ -8,19 +8,18 @@ class CardList extends Component {
     }
 
     render() {
-        console.log(this.props)
+        //console.log(this.props)
         return (
             <div>
                 { this.props.pokemonsList? (
                     <div className="row">
                         {this.props.pokemonsList.map(el => (
-                            /*<li key={el.name}>{el.name}</li>*/
-                            <Card/>
+                            <Card key={el.name}/>
                         ))}
                     </div>
                 ):(
                     <div>
-                        <h1>Loading ...</h1>
+                        <h1>Loading pokemons...</h1>
                     </div>
                 )}
             </div>

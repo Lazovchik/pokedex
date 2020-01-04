@@ -4,13 +4,13 @@ const defaultState = {
     pokemonsList: []
 }
 
-const listReducer = (state = defaultState, action) => {
+export const listReducer = (state = defaultState, action) => {
     switch (action.type) {
         case (LOAD_POKEMON_LIST):
-            return {
-                ...state,
-                pokemonsList: action.payload
-            };
+           return {
+               ...state,
+               pokemonsList: action.payload
+           };
     }
     return state;
 }

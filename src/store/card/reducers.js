@@ -7,7 +7,7 @@ const defaultState = {
     imgUrl: ""
 }
 
-const cardReducer = (state = defaultState, action) => {
+export const cardReducer = (state = defaultState, action) => {
     switch (action.type) {
         case (LOAD_POKEMON_CARD):
             return {

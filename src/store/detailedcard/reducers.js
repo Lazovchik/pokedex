@@ -6,7 +6,7 @@ const defaultState = {
     abilities: []
 }
 
-const detailReducer = (state = defaultState, action) => {
+export const detailReducer = (state = defaultState, action) => {
     switch (action.type) {
         case (''):
     }
