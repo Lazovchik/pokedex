@@ -1,8 +1,22 @@
-import {LOAD_CARD_DETAILS, LOAD_SPECIES_DETAILS} from "../action-types";
+import {LOAD_CARD_DETAILS, LOAD_SPECIES_DETAILS, FETCH_DETAILS} from "../action-types";
 
 const defaultState = {
     details: [],
     species: [],
+
+    infos: {
+        name : '',
+        id : '',
+        imgUrl: '',
+        height: '',
+        weight: '',
+        hp: '',
+        attack: '',
+        defence: '',
+        sp_attack: '',
+        sp_defence: '',
+        speed: ''
+    }
 
 }
 
@@ -12,6 +26,11 @@ export const detailReducer = (state = defaultState, action) => {
             return {
                 ...state,
                 details: action.payload
+            };
+        case (FETCH_DETAILS):
+            return {
+                ...state,
+                infos: action.payload
             };
         case (LOAD_SPECIES_DETAILS):
             return {

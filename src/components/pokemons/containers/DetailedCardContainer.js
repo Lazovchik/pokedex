@@ -3,6 +3,7 @@ import {bindActionCreators} from "redux";
 import {loadPokemonDetail, loadSpeciesDetail } from "../../../store/detailedcard/actions";
 import {connect} from "react-redux";
 import DetailedCard from "../DetailedCard";
+import DetailsContainer from "./DetailsContainer";
 
 class DetailedCardContainer extends Component {
 
@@ -15,7 +16,7 @@ class DetailedCardContainer extends Component {
         return (
             <div className="row">
                 <div className="col">
-                    <DetailedCard
+                    <DetailsContainer
                         details={this.props.details}
                     />
                 </div>
@@ -27,19 +28,15 @@ class DetailedCardContainer extends Component {
 const mapStateToProps = state => {
     return {
         details: state.detail.details,
-        species: state.detail.species
+        //species: state.detail.species
     };
 }
 const mapDispatchToProps = (dispatch) => {
     return {
         loadPokemonDetail: bindActionCreators(loadPokemonDetail, dispatch),
-        loadSpeciesDetail: bindActionCreators(loadSpeciesDetail, dispatch)
+        //loadSpeciesDetail: bindActionCreators(loadSpeciesDetail, dispatch)
     };
 }
-
-/*const mapDispatchToProps = {
-    loadPokemonList
-}*/
 
 export default connect(mapStateToProps, mapDispatchToProps)(DetailedCardContainer);
 

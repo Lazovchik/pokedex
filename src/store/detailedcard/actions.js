@@ -1,4 +1,4 @@
-import {LOAD_CARD_DETAILS, LOAD_SPECIES_DETAILS} from "../action-types";
+import {LOAD_CARD_DETAILS, LOAD_SPECIES_DETAILS, FETCH_DETAILS, LOAD_POKEMON_CARD} from "../action-types";
 
 export function loadPokemonDetail (link) {
     return function(dispatch){
@@ -20,3 +20,8 @@ export function loadSpeciesDetail (link) {
             });
     }
 }
+
+export const fetchDetails = (data) => ({
+    type: FETCH_DETAILS,
+    payload: data
+})
