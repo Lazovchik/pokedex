@@ -1,6 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 
+import { BrowserRouter,Router, Route, Switch } from 'react-router-dom';
+
+
 import './styles/App.css';
 import NavBar from "./components/NavBar";
 import MainBoard from "./components/MainBoard";
@@ -17,12 +20,13 @@ const store = createStore(rootReducer, storeEnhancers(applyMiddleware(thunk)) );
 const  App = () => {
   return (
       <Provider store={store}>
-          <div className="App">
-              <NavBar />
-              <div className="container">
-                  <MainBoard />
+              <div className="App">
+
+                  <NavBar />
+                  <div className="container">
+                      <MainBoard />
+                  </div>
               </div>
-          </div>
       </Provider>
   );
 }
