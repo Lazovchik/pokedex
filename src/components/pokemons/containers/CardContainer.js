@@ -19,6 +19,11 @@ class CardContainer extends Component {
         );
     }
 }
+
+export default CardContainer;
+
+
+
 /*
 const mapStateToProps = state => {
     return {
@@ -37,4 +42,3 @@ const mapDispatchToProps = (dispatch) => {
 
 export default connect(mapStateToProps,{loadPokemonCard})(CardContainer);
 */
-export default CardContainer;
