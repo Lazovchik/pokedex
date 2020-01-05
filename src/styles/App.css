@@ -4,7 +4,10 @@
   padding-top: 65px;
   /*100% OF THE VIEWED HEIGHT*/
   min-height: 100vh;
+
+  background-color: rgba(102, 102, 255, 0.4);
 }
+
 .navbar{
   background-color: #6666ff !important;
 }
@@ -14,5 +17,9 @@
 }
 
 .card{
-  background-color: rgba(102, 102, 255, 0.2)
+  background-color: rgba(102, 102, 255, 0.2);
+}
+.poke-card-img{
+  width: 150px;
+  height: 150px;
 }

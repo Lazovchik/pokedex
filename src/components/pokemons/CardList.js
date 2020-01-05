@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Card from "./Card";
+import CardContainer from "./containers/CardContainer";
 
 class CardList extends Component {
 
@@ -14,7 +14,7 @@ class CardList extends Component {
                 { this.props.pokemonsList? (
                     <div className="row">
                         {this.props.pokemonsList.map(el => (
-                            <Card key={el.name}/>
+                            <CardContainer name={el.name} url={el.url} key={el.name}/>
                         ))}
                     </div>
                 ):(
