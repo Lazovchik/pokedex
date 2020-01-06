@@ -7,6 +7,7 @@ const defaultState = {
     infos: {
         name : '',
         id : '',
+        base_exp: '',
         imgUrl: '',
         height: '',
         weight: '',

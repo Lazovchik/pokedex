@@ -35,8 +35,11 @@ class DetailsContainer extends Component {
             }
         })
 
+        let base_exp = this.props.details.base_experience;
+        //convert to meters
         let height = this.props.details.height;
-        let weight = this.props.details.weight;
+        //convert to kilograms
+        let weight = this.props.details.weight * 0.1;
         let name = this.props.details.name;
         let id = this.props.details.id;
         let imgUrl="";
@@ -51,6 +54,7 @@ class DetailsContainer extends Component {
         let data = {
             name,
             id,
+            base_exp,
             imgUrl,
             height,
             weight,
