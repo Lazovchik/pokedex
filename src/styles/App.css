@@ -1,9 +1,19 @@
 
 .App{
   /*to move cards UNDER the navbar*/
-  padding-top: 65px;
+  padding-top: 100px;
   /*100% OF THE VIEWED HEIGHT*/
   min-height: 100vh;
+
+  background-color: rgba(102, 102, 255, 0.4);
+}
+
+.board{
+  /*to move cards UNDER the navbar*/
+  padding-top: 100px;
+  /*100% OF THE VIEWED HEIGHT*/
+  min-height: 100vh;
+  min-width: 100vw;
 
   background-color: rgba(102, 102, 255, 0.4);
 }

@@ -11,7 +11,7 @@ class DetailedCard extends Component {
         return (
             <div className="row">
                 <div className="col">
-                    <div className="card mx-auto">
+                    <div className="card mx-auto w-75">
                         <h3 className="card-header text-center">
                             Pokemon
                         </h3>

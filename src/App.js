@@ -18,17 +18,19 @@ class  App extends Component {
     render() {
         console.log(localStorage.getItem('pokemonsChoice'))
         return (
+
               <div className="App">
 
                   <NavBar/>
-                  <div className="container">
+                  <MainBoard />
+                  {/*<div className="container">
                       {(localStorage.getItem('pokemonsChoice') == -1 )? (
                           <MainBoard/>
                       ) : (
                           <DetailedCardContainer />
                       )}
 
-                  </div>
+                  </div>*/}
               </div>
 );
   }
