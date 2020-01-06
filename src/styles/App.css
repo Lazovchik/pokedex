@@ -23,3 +23,7 @@
   width: 150px;
   height: 150px;
 }
+
+.bg-soft{
+  background-color: rgba(102, 102, 255, 0.2);
+}

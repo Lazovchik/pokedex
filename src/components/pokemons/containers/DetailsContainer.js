@@ -20,13 +20,13 @@ class DetailsContainer extends Component {
                 case 'attack':
                     attack = el.base_stat;
                     break;
-                case 'defence':
+                case 'defense':
                     defence = el.base_stat;
                     break;
-                case 'sp_attack':
+                case 'special-attack':
                     sp_attack = el.base_stat;
                     break;
-                case 'sp_defence':
+                case 'special-defense':
                     sp_defence = el.base_stat;
                     break;
                 case 'speed':
@@ -37,7 +37,7 @@ class DetailsContainer extends Component {
 
         let base_exp = this.props.details.base_experience;
         //convert to meters
-        let height = this.props.details.height;
+        let height = (this.props.details.height*0.1).toFixed(2);
         //convert to kilograms
         let weight = this.props.details.weight * 0.1;
         let name = this.props.details.name;
@@ -46,10 +46,8 @@ class DetailsContainer extends Component {
 
         if(this.props.details.sprites.front_default)
         {
-            console.log(this.props.details.sprites);
             imgUrl = this.props.details.sprites.front_default;
         }
-       // imgUrl = this.props.details.sprites.front_default;
 
         let data = {
             name,

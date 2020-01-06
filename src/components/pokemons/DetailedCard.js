@@ -16,59 +16,80 @@ class DetailedCard extends Component {
                             Pokemon
                         </h3>
                         <div className="card-body">
-                            <div className="card-title text-center mx-auto">
-
-                            </div>
                             <div className="card-text text-center">
                                 <div className="row">
-                                    <div className="col bg-warning">
+                                    <div className="col">
                                         <h4>
                                             {this.props.infos.name.toUpperCase()}
                                         </h4>
-                                        <br/>
                                         <img
-                                            className="card-img-top mx-auto"
+                                            className="card-img-top mx-auto mt-5"
                                             src={this.props.infos.imgUrl}
                                         />
                                     </div>
-                                    <div className="col bg-danger">
+                                    <div className="col">
                                         <h4>
                                             Characteristics:
                                         </h4>
-
-                                        <table className="table">
+                                        <table className="table bg-soft">
                                             <tbody>
-                                            <tr>
-                                                <th><h5>Name:</h5></th>
-                                                <th><h5>Value:</h5></th>
+                                                <tr className="bg-soft">
+                                                    <th>Name:</th>
+                                                    <th>Value:</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Pokemon Index</th>
+                                                    <th>{this.props.infos.id}</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Base Experience</th>
+                                                    <th>{this.props.infos.base_exp}</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Height</th>
+                                                    <th>{this.props.infos.height} M </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Weight</th>
+                                                    <th>{this.props.infos.weight} KG</th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h4>
+                                            Stats:
+                                        </h4>
+                                        <table className="table bg-soft">
+                                            <tbody>
+                                            <tr className="bg-soft">
+                                                <th>Name:</th>
+                                                <th>Value:</th>
                                             </tr>
                                             <tr>
-                                                <th>Pokemon Index</th>
-                                                <th>{this.props.infos.id}</th>
+                                                <th>HP</th>
+                                                <th>{this.props.infos.hp}</th>
                                             </tr>
                                             <tr>
-                                                <th>Base Experience</th>
-                                                <th>{this.props.infos.base_exp}</th>
+                                                <th>Attack</th>
+                                                <th>{this.props.infos.attack}</th>
                                             </tr>
                                             <tr>
-                                                <th>Height</th>
-                                                <th>{this.props.infos.height*0.1} M </th>
+                                                <th>Defence</th>
+                                                <th>{this.props.infos.defence}</th>
                                             </tr>
                                             <tr>
-                                                <th>Weight</th>
-                                                <th>{this.props.infos.weight} KG</th>
+                                                <th>Special Attack</th>
+                                                <th>{this.props.infos.sp_attack}</th>
                                             </tr>
                                             <tr>
-                                                <th>Pokemon Index</th>
-                                                <th>{this.props.infos.id}</th>
+                                                <th>Special Defence</th>
+                                                <th>{this.props.infos.sp_defence}</th>
                                             </tr>
                                             <tr>
-                                                <th>Pokemon Index</th>
-                                                <th>{this.props.infos.id}</th>
+                                                <th>Speed</th>
+                                                <th>{this.props.infos.speed}</th>
                                             </tr>
                                             </tbody>
                                         </table>
-
                                     </div>
                                 </div>
                             </div>
