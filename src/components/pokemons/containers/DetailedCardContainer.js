@@ -8,11 +8,14 @@ import DetailsContainer from "./DetailsContainer";
 class DetailedCardContainer extends Component {
 
     componentDidMount() {
-        this.props.loadPokemonDetail("https://pokeapi.co/api/v2/pokemon/1/");
+        this.props.loadPokemonDetail("https://pokeapi.co/api/v2/pokemon/"+this.props.displayablePokemonId+"/");
+        //console.log(this.props.displayablePokemonId);
+
     }
 
     render() {
         console.log(this.props.details);
+        console.log(this.props.displayablePokemonId);
         return (
             <div className="row">
                 <div className="col">
@@ -28,6 +31,7 @@ class DetailedCardContainer extends Component {
 const mapStateToProps = state => {
     return {
         details: state.detail.details,
+        displayablePokemonId: state.idLoad.displayablePokemonId
         //species: state.detail.species
     };
 }

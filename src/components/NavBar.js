@@ -9,7 +9,7 @@ class NavBar extends Component{
                     <a className="navbar-brand">Pokedex</a>
                     <form className="form-inline">
                         <button className="btn btn-outline-info my-2 my-sm-0 bg-info">
-                            <Link to={'/pokemon'} className="nav-link">
+                            <Link to={'/'} className="nav-link">
                                 Load Pokemons
                             </Link>
                         </button>

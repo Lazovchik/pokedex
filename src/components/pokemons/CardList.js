@@ -14,7 +14,12 @@ class CardList extends Component {
                 { this.props.pokemonsList? (
                     <div className="row">
                         {this.props.pokemonsList.map(el => (
-                            <CardContainer name={el.name} url={el.url} key={el.name}/>
+                            <CardContainer
+                                name={el.name}
+                                url={el.url}
+                                key={el.name}
+                                loadPokemonDetailedCard={this.props.loadPokemonDetailedCard}
+                            />
                         ))}
                     </div>
                 ):(

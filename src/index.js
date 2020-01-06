@@ -28,7 +28,7 @@ const Root = ({ store }) => (
         <Router>
             <Switch>
                 <Route exact path="/" component={App} />
-                <Route path="/pokemon/:pokemonID" component={PokemonBoard} />
+                <Route path="/pokemon/:id" component={PokemonBoard} />
             </Switch>
         </Router>
     </Provider>
