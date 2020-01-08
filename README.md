@@ -1,3 +1,19 @@
+# Pokedex
+
+This is a little React/Redux/Bootstrap project.
+
+Basically, it is using PokeAPI to load different pokemins and show their detailed characteristics to the user. 
+
+## To install
+Clone or download the repository. 
+
+Go to the projects folder in your terminal and use `npm install`.
+
+## To launch: 
+
+Use `npm start` in terminal in the projects folder. 
+Go to `localhost:3000/` in any web browser (Chrome prefered).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
