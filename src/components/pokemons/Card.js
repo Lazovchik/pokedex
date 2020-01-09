@@ -27,7 +27,6 @@ class Card extends Component {
     }
 
     loadId = () => {
-        //console.log(this.props.id);
         this.props.loadPokemonDetailedCard(this.props.id);
     }
 

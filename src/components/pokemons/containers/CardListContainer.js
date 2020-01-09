@@ -8,7 +8,6 @@ import CardList from "../CardList";
 
 class CardListContainer extends Component {
     render() {
-       // console.log(this.props.displayablePokemonId);
         return (
             <CardList
                 pokemonsList={this.props.pokemonsList}

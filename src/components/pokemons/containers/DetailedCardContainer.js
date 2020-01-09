@@ -1,16 +1,13 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from "redux";
-import {loadPokemonDetail, loadSpeciesDetail } from "../../../store/detailedcard/actions";
+import {loadPokemonDetail} from "../../../store/detailedcard/actions";
 import {connect} from "react-redux";
-import DetailedCard from "../DetailedCard";
 import DetailsContainer from "./DetailsContainer";
 
 class DetailedCardContainer extends Component {
 
     componentDidMount() {
         this.props.loadPokemonDetail("https://pokeapi.co/api/v2/pokemon/"+this.props.displayablePokemonId+"/");
-        //console.log(this.props.displayablePokemonId);
-
     }
 
     render() {

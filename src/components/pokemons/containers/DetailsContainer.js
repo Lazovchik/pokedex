@@ -1,7 +1,6 @@
-//unused
 import React, {Component} from 'react';
 import {bindActionCreators} from "redux";
-import {fetchDetails, loadSpeciesDetail} from "../../../store/detailedcard/actions";
+import {fetchDetails} from "../../../store/detailedcard/actions";
 import {connect} from "react-redux";
 import DetailedCard from "../DetailedCard";
 
@@ -70,7 +69,6 @@ class DetailsContainer extends Component {
 
 
     render() {
-        //this.fetchingData();
         return (
             <div>
                 <DetailedCard />
@@ -92,8 +90,5 @@ const mapDispatchToProps = (dispatch) => {
     };
 }
 
-/*const mapDispatchToProps = {
-    loadPokemonList
-}*/
 
 export default connect(mapStateToProps, mapDispatchToProps)(DetailsContainer);

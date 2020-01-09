@@ -3,10 +3,6 @@ import {connect} from "react-redux";
 
 class DetailedCard extends Component {
 
-    /*componentDidMount() {
-
-    }*/
-
     render() {
         return (
             <div className="row">
