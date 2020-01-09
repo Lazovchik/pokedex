@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
 
 class Card extends Component {
 
@@ -25,6 +26,10 @@ class Card extends Component {
 
     }
 
+    loadId = () => {
+        this.props.loadPokemonDetailedCard(this.props.id);
+    }
+
     render() {
         return (
             <div className="col-md-3 mb-3">
@@ -34,18 +39,28 @@ class Card extends Component {
                         <div className="card-title text-center">
                             <h4>{this.state.name.toUpperCase()}</h4>
                         </div>
-                        {(this.state.imageLoading & !this.state.limitedRequests)?
-                            (<h4 className="mx-auto text-center bg-warning">Image is Loading</h4>) : null
-                        }
-                        < img
-                            className="card-img-top mx-auto poke-card-img"
-                            onLoad={()=>this.setState({imageLoading: false})}
-                            onError={()=>this.setState({limitedRequests: true})}
-                            src={this.state.imgUrl}
-                        />
-                        {this.state.limitedRequests?
-                            (<h4 className="mx-auto text-center bg-danger">GitHub request limit achieved</h4>) : null
-                        }
+                        <div className="card-text text-center">
+                            {(this.state.imageLoading & !this.state.limitedRequests)?
+                                (<h4 className="mx-auto text-center bg-warning">Image is Loading</h4>) : null
+                            }
+                            < img
+                                className="card-img-top mx-auto poke-card-img"
+                                onLoad={()=>this.setState({imageLoading: false})}
+                                onError={()=>this.setState({limitedRequests: true})}
+                                src={this.state.imgUrl}
+                            />
+                            {this.state.limitedRequests?
+                                (<h4 className="mx-auto text-center bg-danger">GitHub request limit achieved</h4>) : null
+                            }
+                            <button
+                                className="btn btn-outline-info my-2 my-sm-0 bg-info mx-auto"
+                                onClick={this.loadId}
+                            >
+                                <Link to={'/pokemon/'+this.props.id} className="nav-link">
+                                    Details
+                                </Link>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
